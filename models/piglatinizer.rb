@@ -13,7 +13,7 @@ class PigLatinizer
   end
 
   def piglatinize(word)
-    if word[0].scan(/[aeouiAEIOU]/).count > 0
+    if word[0].scan(/[aeoui]/i).count > 0
       word.concat("way")
     else
       first_consonants = word.match(/^[bcdfghjklmnpqrstvwxyzBCDFGHJKLMNPQRSTVWXYZ]+/)[0]
